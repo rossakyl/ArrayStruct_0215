@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+#include <string>;
+
+struct Buku {
+    string judul;
+    string jumlahhalaman;
+    string pengarang;
+};
+
+int main(){
+    Buku bk[2];
+
+    for (int i = 0; i < 2; i++)
+    {
+        cout << "masukkan judul = ";
+        getline (cin, bk[i].judul);
+        cout << "masukkan jumlah halaman = ";
+        cin >> bk[i].jumlahhalaman;
+        cin.ignore();
+        cout << "masukkan pengarang = ";
+        getline (cin, bk[i].pengarang); 
+        
+    }
+
+    
+    cout << endl;
+    cout << "tampilkan data buku" << endl;
+    cout << endl;
+    for (int i = 0; i < 2; i++)
+    {
+    cout << "judul buku = " << bk[i].judul <<endl;
+    cout << "jumlah halaman buku = " << bk[i].jumlahhalaman << endl;
+    cout << "pengarang buku = " << bk[i].pengarang << endl; 
+    }
+
+}
